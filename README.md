@@ -39,14 +39,14 @@ KroneckerDelta[h1,o1]KroneckerDelta[h3,q1]KroneckerDelta[p2,q2]KroneckerDelta[p3
 KroneckerDelta[h1,q4]KroneckerDelta[h3,q2]KroneckerDelta[o1,q1]KroneckerDelta[p2,v1]KroneckerDelta[p3,q3]}
 ```
 
-### CC with singles and doubles (CCD)
+### CC with doubles (CCD)
 
 To generate the CCD energy and amplitude equations, one must define the following input
 
 Input:
 
 ```mathematica
-ClusterOperator = {{"1h1p"}, {"2h2p"}};
+ClusterOperator = {{"2h2p"}};
 EOMOperator = {{"0h0p"}};
 CCgen[ClusterOperator,EOMOperator]
 ```
@@ -62,10 +62,11 @@ t2[[o1,h2,v1,p2]]-1/2 ERI[[o1,o2,h1,h2]] t2[[o1,o2,p2,p1]]-1/4 ERI[[o1,o2,v1,v2]
 t2[[o2,h1,v2,p1]]+1/2 ERI[[o1,o2,v1,v2]] t2[[o1,h1,v1,v2]] t2[[o2,h2,p2,p1]]-ERI[[o1,o2,v1,v2]] t2[[o1,h1,v1,p2]] t2[[o2,h2,v2,p1]]}
 ```
 
-### IP Equation of motion with CC singles and doubles (IP-EOM-CC)
+### IP-EOM-CC with singles and doubles (IP-EOM-CCSD)
 
 
-In this example the IP-EOM-CCSD equations are generated thrue the following simple imput
+In this example, the IP-EOM-CCSD equations are generated thanks to the following input
+
 Input:
 
 ```mathematica
@@ -97,7 +98,7 @@ Output:
 ```
 
 
-### Single Block of DEA-EOM-CCSD in terms of many-body terms.
+### Single block of DEA-EOM-CCSD in terms of many-body terms.
 
 It is possible to generate a single block as follows:
 
@@ -121,11 +122,10 @@ Output:
 
 'Block (2,1)'
 
-KroneckerDelta[h3, h5] \[Chi][[h4, p1, h2, h1]] + KroneckerDelta[h2, h5] \[Chi][[h4, p1, h3, h1]] + KroneckerDelta[h1, h5] \[Chi][[h4, p1, h3, h2]] - KroneckerDelta[h3, h4] \[Chi][[h5, p1, h2, h1]] - 
- KroneckerDelta[h2, h4] \[Chi][[h5, p1, h3, h1]] -  KroneckerDelta[h1, h4] \[Chi][[h5, p1, h3, h2]] - \[Chi][[h5, h4, p1, h3, h2, h1]]
+KroneckerDelta[h3,h5]\[Chi][[h4,p1,h2,h1]]+KroneckerDelta[h2,h5]\[Chi][[h4,p1,h3,h1]]+KroneckerDelta[h1,h5]\[Chi][[h4,p1,h3,h2]]-KroneckerDelta[h3,h4]\[Chi][[h5,p1,h2,h1]]-
+KroneckerDelta[h2,h4]\[Chi][[h5,p1,h3,h1]]-KroneckerDelta[h1,h4]\[Chi][[h5,p1,h3,h2]]-\[Chi][[h5,h4,p1,h3,h2,h1]]
 
 ```
-
 
 ### Single many-body term using a Hamiltonian.
 
@@ -153,9 +153,9 @@ Output:
 
 ### Index Convention
 
-For the operators belonging to the bra and the ket, we use p1, p2, $\cdots$,h1, h2,  $\cdots$. 
-For the particles/holes that play the role of dummy indices in the cluster operator $\hat{T}$ we use o1, o2, $\cdots$, v1,v2 $\cdots$, where the notation of o and v refers to occupied and virtual, respectively.
-Finally, for the arbitrary indexes that could be either particle or hole to q1, q2, q3, $\cdots$.
+For the operators belonging to the bra and the ket, we use p1, p2, $\cdots$, h1, h2, $\cdots$. 
+For the particles/holes that play the role of dummy indices in the cluster operator $\hat{T}$ we use o1, o2, $\cdots$, v1, v2, $\cdots$, where the notations o and v refer to occupied and virtual, respectively.
+Finally, for the arbitrary indexes that can be either particle or hole, we use q1, q2, q3, $\cdots$.
 
 
 
