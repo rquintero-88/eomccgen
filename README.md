@@ -33,22 +33,22 @@ CWick[SQString]
 Output:
 
 ```mathematica
-{KroneckerDelta[h1, h3] KroneckerDelta[o1, q2] KroneckerDelta[p2, q1] KroneckerDelta[p3, q3] KroneckerDelta[q4, v1], -KroneckerDelta[h1, h3] KroneckerDelta[o1, q2] KroneckerDelta[ p2, q1] KroneckerDelta[p3, q4] KroneckerDelta[q3, v1], -KroneckerDelta[h1, h3] KroneckerDelta[o1, q1] KroneckerDelta[p2, q2] KroneckerDelta[p3, q3] KroneckerDelta[q4, v1], KroneckerDelta[h1, h3] KroneckerDelta[o1, q1] KroneckerDelta[p2, q2] KroneckerDelta[p3, q4] KroneckerDelta[q3, v1], -KroneckerDelta[h1, q3] KroneckerDelta[h3, q1] KroneckerDelta[o1, q2] KroneckerDelta[p2, p3] KroneckerDelta[q4, v1],
-KroneckerDelta[h1, q3] KroneckerDelta[h3, q2] KroneckerDelta[o1, q1] KroneckerDelta[p2, p3] KroneckerDelta[q4, v1], KroneckerDelta[h1, q4] KroneckerDelta[h3, q1] KroneckerDelta[o1, q2] KroneckerDelta[p2, p3] KroneckerDelta[q3, v1], -KroneckerDelta[h1, q4] KroneckerDelta[h3, q2] KroneckerDelta[o1, q1] KroneckerDelta[p2, p3] KroneckerDelta[q3, v1], -KroneckerDelta[h1, o1] KroneckerDelta[h3, q2] KroneckerDelta[p2, q1] KroneckerDelta[p3, q3] KroneckerDelta[q4, v1], KroneckerDelta[h1, o1] KroneckerDelta[h3, q2] KroneckerDelta[p2, q1] KroneckerDelta[p3, q4] KroneckerDelta[q3, v1],
- KroneckerDelta[h1, o1] KroneckerDelta[h3, q1] KroneckerDelta[p2, q2] KroneckerDelta[p3, q3] KroneckerDelta[q4, v1], -KroneckerDelta[h1, o1] KroneckerDelta[h3, q1] KroneckerDelta[p2, q2] KroneckerDelta[p3, q4] KroneckerDelta[q3, v1],  KroneckerDelta[h1, q3] KroneckerDelta[h3, q1] KroneckerDelta[o1, q2] KroneckerDelta[p2, v1] KroneckerDelta[p3, q4], -KroneckerDelta[h1, q3] KroneckerDelta[h3, q2] KroneckerDelta[o1, q1] KroneckerDelta[p2, v1] KroneckerDelta[p3, q4], -KroneckerDelta[h1, q4] KroneckerDelta[h3, q1] KroneckerDelta[o1, q2] KroneckerDelta[p2, v1] KroneckerDelta[p3, q3], 
- KroneckerDelta[h1, q4] KroneckerDelta[h3, q2] KroneckerDelta[o1, q1] KroneckerDelta[p2, v1] KroneckerDelta[p3, q3]}
+{KroneckerDelta[h1,h3]KroneckerDelta[o1,q2]KroneckerDelta[p2,q1]KroneckerDelta[p3,q3]KroneckerDelta[q4,v1],-KroneckerDelta[h1,h3]KroneckerDelta[o1,q2]KroneckerDelta[p2,q1]KroneckerDelta[p3,q4]KroneckerDelta[q3,v1],-KroneckerDelta[h1,h3]KroneckerDelta[o1,q1]KroneckerDelta[p2,q2]KroneckerDelta[p3,q3]KroneckerDelta[q4,v1],KroneckerDelta[h1,h3]KroneckerDelta[o1,q1]KroneckerDelta[p2,q2]KroneckerDelta[p3,q4]KroneckerDelta[q3,v1],-KroneckerDelta[h1,q3]KroneckerDelta[h3,q1]KroneckerDelta[o1,q2]KroneckerDelta[p2,p3]KroneckerDelta[q4,v1],
+KroneckerDelta[h1,q3]KroneckerDelta[h3,q2]KroneckerDelta[o1,q1]KroneckerDelta[p2,p3]KroneckerDelta[q4,v1],KroneckerDelta[h1,q4]KroneckerDelta[h3,q1]KroneckerDelta[o1,q2]KroneckerDelta[p2,p3]KroneckerDelta[q3,v1],-KroneckerDelta[h1,q4]KroneckerDelta[h3,q2]KroneckerDelta[o1,q1]KroneckerDelta[p2,p3]KroneckerDelta[q3,v1],-KroneckerDelta[h1,o1]KroneckerDelta[h3,q2]KroneckerDelta[p2,q1]KroneckerDelta[p3,q3]KroneckerDelta[q4,v1],KroneckerDelta[h1,o1]KroneckerDelta[h3,q2]KroneckerDelta[p2,q1]KroneckerDelta[p3,q4]KroneckerDelta[q3,v1],
+KroneckerDelta[h1,o1]KroneckerDelta[h3,q1]KroneckerDelta[p2,q2]KroneckerDelta[p3,q3]KroneckerDelta[q4,v1],-KroneckerDelta[h1,o1]KroneckerDelta[h3,q1]KroneckerDelta[p2,q2]KroneckerDelta[p3,q4]KroneckerDelta[q3,v1],KroneckerDelta[h1,q3]KroneckerDelta[h3,q1]KroneckerDelta[o1,q2]KroneckerDelta[p2,v1]KroneckerDelta[p3,q4],-KroneckerDelta[h1,q3]KroneckerDelta[h3,q2]KroneckerDelta[o1,q1]KroneckerDelta[p2,v1]KroneckerDelta[p3,q4],-KroneckerDelta[h1,q4]KroneckerDelta[h3,q1]KroneckerDelta[o1,q2]KroneckerDelta[p2,v1]KroneckerDelta[p3,q3],
+KroneckerDelta[h1,q4]KroneckerDelta[h3,q2]KroneckerDelta[o1,q1]KroneckerDelta[p2,v1]KroneckerDelta[p3,q3]}
 ```
 
-### CC with with singles and doubles (CCD)
+### CC with singles and doubles (CCD)
 
-To generate the CCD energy and amplitude equations we define the following input
+To generate the CCD energy and amplitude equations, one must define the following input
 
 Input:
 
 ```mathematica
 ClusterOperator = {{"1h1p"}, {"2h2p"}};
 EOMOperator = {{"0h0p"}};
-CCgen[ClusterOperator, EOMOperator]
+CCgen[ClusterOperator,EOMOperator]
 ```
 
 Output:
@@ -97,9 +97,9 @@ Output:
 ```
 
 
-### Single Blocks of DEA-EOM-CCSD  in  terms of many body terms.
+### Single Block of DEA-EOM-CCSD in terms of many-body terms.
 
-It is possible to generate single blocks 
+It is possible to generate a single block as follows:
 
 Input:
 
@@ -127,7 +127,7 @@ KroneckerDelta[h3, h5] \[Chi][[h4, p1, h2, h1]] + KroneckerDelta[h2, h5] \[Chi][
 ```
 
 
-### Single Many-body terms using a Hamiltonian.
+### Single many-body term using a Hamiltonian.
 
 Input:
 
@@ -148,10 +148,10 @@ Output:
 \[Chi][[p2,p1,h1,p3]]==t1[[o1,p2]] t1[[o2,p1]] ERI[[o1,o2,h1,p3]]+t1[[h1,v1]] t1[[o1,p2]] t1[[o2,p1]] ERI[[o1,o2,v1,p3]]-t1[[o1,p2]] ERI[[o1,p1,h1,p3]]-t1[[h1,v1]] t1[[o1,p2]] ERI[[o1,p1,v1,p3]]+t1[[o1,p1]] ERI[[o1,p2,h1,p3]]+t1[[h1,v1]] t1[[o1,p1]] ERI[[o1,p2,v1,p3]]+ERI[[p2,p1,h1,p3]]+t1[[h1,v1]] ERI[[p2,p1,v1,p3]]+F[[o1,p3]] t2[[o1,h1,p2,p1]]-ERI[[o1,p2,v1,p3]] t2[[o1,h1,v1,p1]]+ERI[[o1,p1,v1,p3]] t2[[o1,h1,v1,p2]]+1/2 ERI[[o1,o2,h1,p3]] t2[[o1,o2,p2,p1]]+1/2 t1[[h1,v1]] ERI[[o1,o2,v1,p3]] t2[[o1,o2,p2,p1]]+t1[[o1,v1]] ERI[[o1,o2,v1,p3]] t2[[o2,h1,p2,p1]]-t1[[o1,p2]] ERI[[o1,o2,v1,p3]] t2[[o2,h1,v1,p1]]+t1[[o1,p1]] ERI[[o1,o2,v1,p3]] t2[[o2,h1,v1,p2]]
 ```
 
-## Convention
+## Conventions
 
 
-### Index Convention.
+### Index Convention
 
 For the operators belonging to the bra and the ket, we use p1, p2, $\cdots$,h1, h2,  $\cdots$. 
 For the particles/holes that play the role of dummy indices in the cluster operator $\hat{T}$ we use o1, o2, $\cdots$, v1,v2 $\cdots$, where the notation of o and v refers to occupied and virtual, respectively.
