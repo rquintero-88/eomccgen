@@ -56,7 +56,7 @@ Output:
 ```mathematica
 'CC Energy'
 {1/4 ERI[[o1,o2,v1,v2]] t2[[o1,o2,v1,v2]]}
-'CC Amolitude equations'
+'CC Amplitude equations'
 {-ERI[[p2,p1,h1,h2]]-F[[p2,v1]] t2[[h1,h2,v1,p1]]+F[[p1,v1]] t2[[h1,h2,v1,p2]]-1/2 ERI[[p2,p1,v1,v2]] t2[[h1,h2,v1,v2]]-F[[o1,h2]] t2[[o1,h1,p2,p1]]+ERI[[o1,p2,v1,h2]] t2[[o1,h1,v1,p1]]-ERI[[o1,p1,v1,h2]] t2[[o1,h1,v1,p2]]+F[[o1,h1]] t2[[o1,h2,p2,p1]]-ERI[[o1,p2,v1,h1]] t2[[o1,h2,v1,p1]]+ERI[[o1,p1,v1,h1]] 
 t2[[o1,h2,v1,p2]]-1/2 ERI[[o1,o2,h1,h2]] t2[[o1,o2,p2,p1]]-1/4 ERI[[o1,o2,v1,v2]] t2[[h1,h2,v1,v2]] t2[[o1,o2,p2,p1]]-1/2 ERI[[o1,o2,v1,v2]] t2[[h1,h2,v2,p2]] t2[[o1,o2,v1,p1]]+1/2 ERI[[o1,o2,v1,v2]] t2[[h1,h2,v2,p1]] t2[[o1,o2,v1,p2]]-1/2 ERI[[o1,o2,v1,v2]] t2[[o1,h2,v1,v2]] t2[[o2,h1,p2,p1]]+ERI[[o1,o2,v1,v2]] t2[[o1,h2,v1,p2]] 
 t2[[o2,h1,v2,p1]]+1/2 ERI[[o1,o2,v1,v2]] t2[[o1,h1,v1,v2]] t2[[o2,h2,p2,p1]]-ERI[[o1,o2,v1,v2]] t2[[o1,h1,v1,p2]] t2[[o2,h2,v2,p1]]}
