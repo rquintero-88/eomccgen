@@ -54,9 +54,9 @@ CCgen[ClusterOperator,EOMOperator]
 Output:
 
 ```mathematica
-'CCD Energy'
+'CC Energy'
 {1/4 ERI[[o1,o2,v1,v2]] t2[[o1,o2,v1,v2]]}
-'T2 equations'
+'CC Amolitude equations'
 {-ERI[[p2,p1,h1,h2]]-F[[p2,v1]] t2[[h1,h2,v1,p1]]+F[[p1,v1]] t2[[h1,h2,v1,p2]]-1/2 ERI[[p2,p1,v1,v2]] t2[[h1,h2,v1,v2]]-F[[o1,h2]] t2[[o1,h1,p2,p1]]+ERI[[o1,p2,v1,h2]] t2[[o1,h1,v1,p1]]-ERI[[o1,p1,v1,h2]] t2[[o1,h1,v1,p2]]+F[[o1,h1]] t2[[o1,h2,p2,p1]]-ERI[[o1,p2,v1,h1]] t2[[o1,h2,v1,p1]]+ERI[[o1,p1,v1,h1]] 
 t2[[o1,h2,v1,p2]]-1/2 ERI[[o1,o2,h1,h2]] t2[[o1,o2,p2,p1]]-1/4 ERI[[o1,o2,v1,v2]] t2[[h1,h2,v1,v2]] t2[[o1,o2,p2,p1]]-1/2 ERI[[o1,o2,v1,v2]] t2[[h1,h2,v2,p2]] t2[[o1,o2,v1,p1]]+1/2 ERI[[o1,o2,v1,v2]] t2[[h1,h2,v2,p1]] t2[[o1,o2,v1,p2]]-1/2 ERI[[o1,o2,v1,v2]] t2[[o1,h2,v1,v2]] t2[[o2,h1,p2,p1]]+ERI[[o1,o2,v1,v2]] t2[[o1,h2,v1,p2]] 
 t2[[o2,h1,v2,p1]]+1/2 ERI[[o1,o2,v1,v2]] t2[[o1,h1,v1,v2]] t2[[o2,h2,p2,p1]]-ERI[[o1,o2,v1,v2]] t2[[o1,h1,v1,p2]] t2[[o2,h2,v2,p1]]}
@@ -80,21 +80,21 @@ Output:
 
 'Many-body terms'
 
-\[Chi][[h3,h1]]==-F[[h3,h1]]-F[[h3,v1]] t1[[h1,v1]]+t1[[o1,v1]] ERI[[h3,o1,v1,h1]]+t1[[h1,v2]] t1[[o1,v1]] ERI[[h3,o1,v1,v2]]+1/2 ERI[[h3,o1,v1,v2]] t2[[o1,h1,v1,v2]]
-\[Chi][[h4,p3]]==F[[h4,p3]]-t1[[o1,v1]] ERI[[h4,o1,v1,p3]]
-\[Chi][[h4,h3,h1,p3]]==ERI[[h4,h3,h1,p3]]+t1[[h1,v1]] ERI[[h4,h3,v1,p3]]
-\[Chi][[h3,p1,h1,h2]]==t1[[o1,p1]] ERI[[h3,o1,h1,h2]]-t1[[h2,v1]] t1[[o1,p1]] ERI[[h3,o1,v1,h1]]+t1[[h1,v1]] t1[[o1,p1]] ERI[[h3,o1,v1,h2]]+t1[[h1,v1]] t1[[h2,v2]] t1[[o1,p1]] ERI[[h3,o1,v1,v2]]-ERI[[h3,p1,h1,h2]]+t1[[h2,v1]] ERI[[h3,p1,v1,h1]]-t1[[h1,v1]] ERI[[h3,p1,v1,h2]]-t1[[h1,v1]] t1[[h2,v2]] ERI[[h3,p1,v1,v2]]-F[[h3,v1]] t2[[h1,h2,v1,p1]]+1/2 t1[[o1,p1]] ERI[[h3,o1,v1,v2]] t2[[h1,h2,v1,v2]]-1/2 ERI[[h3,p1,v1,v2]] t2[[h1,h2,v1,v2]]+t1[[o1,v1]] ERI[[h3,o1,v1,v2]] t2[[h1,h2,v2,p1]]-ERI[[h3,o1,v1,h2]] t2[[o1,h1,v1,p1]]+t1[[h2,v1]] ERI[[h3,o1,v1,v2]] t2[[o1,h1,v2,p1]]+ERI[[h3,o1,v1,h1]] t2[[o1,h2,v1,p1]]-t1[[h1,v1]] ERI[[h3,o1,v1,v2]] t2[[o1,h2,v2,p1]]
-\[Chi][[p1,p3]]==F[[p1,p3]]-F[[o1,p3]] t1[[o1,p1]]-t1[[o1,v1]] t1[[o2,p1]] ERI[[o1,o2,v1,p3]]+t1[[o1,v1]] ERI[[o1,p1,v1,p3]]-1/2 ERI[[o1,o2,v1,p3]] t2[[o1,o2,v1,p1]]
-\[Chi][[h4,h3,h1,h2]]==-ERI[[h4,h3,h1,h2]]+t1[[h2,v1]] ERI[[h4,h3,v1,h1]]-t1[[h1,v1]] ERI[[h4,h3,v1,h2]]-t1[[h1,v1]] t1[[h2,v2]] ERI[[h4,h3,v1,v2]]-1/2 ERI[[h4,h3,v1,v2]] t2[[h1,h2,v1,v2]]
-\[Chi][[h4,p1,h2,p3]]==t1[[o1,p1]] ERI[[h4,o1,h2,p3]]+t1[[h2,v1]] t1[[o1,p1]] ERI[[h4,o1,v1,p3]]-ERI[[h4,p1,h2,p3]]-t1[[h2,v1]] ERI[[h4,p1,v1,p3]]-ERI[[h4,o1,v1,p3]] t2[[o1,h2,v1,p1]]
-\[Chi][[h4,h3,p1,h1,h2,p3]]==ERI[[h4,h3,v1,p3]] t2[[h1,h2,v1,p1]]
+\[Chi]1[[h3,h1]]==-F[[h3,h1]]-F[[h3,v1]] t1[[h1,v1]]+t1[[o1,v1]] ERI[[h3,o1,v1,h1]]+t1[[h1,v2]] t1[[o1,v1]] ERI[[h3,o1,v1,v2]]+1/2 ERI[[h3,o1,v1,v2]] t2[[o1,h1,v1,v2]]
+\[Chi]1[[h4,p3]]==F[[h4,p3]]-t1[[o1,v1]] ERI[[h4,o1,v1,p3]]
+\[Chi]2[[h4,h3,h1,p3]]==ERI[[h4,h3,h1,p3]]+t1[[h1,v1]] ERI[[h4,h3,v1,p3]]
+\[Chi]2[[h3,p1,h1,h2]]==t1[[o1,p1]] ERI[[h3,o1,h1,h2]]-t1[[h2,v1]] t1[[o1,p1]] ERI[[h3,o1,v1,h1]]+t1[[h1,v1]] t1[[o1,p1]] ERI[[h3,o1,v1,h2]]+t1[[h1,v1]] t1[[h2,v2]] t1[[o1,p1]] ERI[[h3,o1,v1,v2]]-ERI[[h3,p1,h1,h2]]+t1[[h2,v1]] ERI[[h3,p1,v1,h1]]-t1[[h1,v1]] ERI[[h3,p1,v1,h2]]-t1[[h1,v1]] t1[[h2,v2]] ERI[[h3,p1,v1,v2]]-F[[h3,v1]] t2[[h1,h2,v1,p1]]+1/2 t1[[o1,p1]] ERI[[h3,o1,v1,v2]] t2[[h1,h2,v1,v2]]-1/2 ERI[[h3,p1,v1,v2]] t2[[h1,h2,v1,v2]]+t1[[o1,v1]] ERI[[h3,o1,v1,v2]] t2[[h1,h2,v2,p1]]-ERI[[h3,o1,v1,h2]] t2[[o1,h1,v1,p1]]+t1[[h2,v1]] ERI[[h3,o1,v1,v2]] t2[[o1,h1,v2,p1]]+ERI[[h3,o1,v1,h1]] t2[[o1,h2,v1,p1]]-t1[[h1,v1]] ERI[[h3,o1,v1,v2]] t2[[o1,h2,v2,p1]]
+\[Chi]1[[p1,p3]]==F[[p1,p3]]-F[[o1,p3]] t1[[o1,p1]]-t1[[o1,v1]] t1[[o2,p1]] ERI[[o1,o2,v1,p3]]+t1[[o1,v1]] ERI[[o1,p1,v1,p3]]-1/2 ERI[[o1,o2,v1,p3]] t2[[o1,o2,v1,p1]]
+\[Chi]2[[h4,h3,h1,h2]]==-ERI[[h4,h3,h1,h2]]+t1[[h2,v1]] ERI[[h4,h3,v1,h1]]-t1[[h1,v1]] ERI[[h4,h3,v1,h2]]-t1[[h1,v1]] t1[[h2,v2]] ERI[[h4,h3,v1,v2]]-1/2 ERI[[h4,h3,v1,v2]] t2[[h1,h2,v1,v2]]
+\[Chi]2[[h4,p1,h2,p3]]==t1[[o1,p1]] ERI[[h4,o1,h2,p3]]+t1[[h2,v1]] t1[[o1,p1]] ERI[[h4,o1,v1,p3]]-ERI[[h4,p1,h2,p3]]-t1[[h2,v1]] ERI[[h4,p1,v1,p3]]-ERI[[h4,o1,v1,p3]] t2[[o1,h2,v1,p1]]
+\[Chi]3[[h4,h3,p1,h1,h2,p3]]==ERI[[h4,h3,v1,p3]] t2[[h1,h2,v1,p1]]
 
 'EOM-CC matrix in terms of many-body terms'
 
-{{-\[Chi][[h3, h1]], -KroneckerDelta[h1, h4] \[Chi][[h3, p3]] + 
+{{-\[Chi]1[[h3, h1]], -KroneckerDelta[h1, h4] \[Chi]1[[h3, p3]] + 
   KroneckerDelta[h1, h3] \[Chi][[h4, p3]] + \[Chi][[h4, h3, h1, p3]]},
- {-\[Chi][[h3, p1, h2, h1]], -KroneckerDelta[h2, h4] KroneckerDelta[p1, p3] \[Chi][[h3, h1]] + KroneckerDelta[h1, h4] KroneckerDelta[p1, p3] \[Chi][[h3, h2]] + KroneckerDelta[h2, h3] KroneckerDelta[p1, p3] \[Chi][[h4, h1]] - KroneckerDelta[h1, h3] KroneckerDelta[p1, p3] \[Chi][[h4, h2]] - KroneckerDelta[h1, h4] KroneckerDelta[h2, h3] \[Chi][[p1,  p3]] + KroneckerDelta[h1, h3] KroneckerDelta[h2, h4] \[Chi][[p1, p3]]
-    - KroneckerDelta[h2, h4] \[Chi][[h3, p1, h1, p3]] + KroneckerDelta[h1, h4] \[Chi][[h3, p1, h2, p3]] + KroneckerDelta[p1, p3] \[Chi][[h4, h3, h2, h1]] +  KroneckerDelta[h2, h3] \[Chi][[h4, p1, h1, p3]] - KroneckerDelta[h1, h3] \[Chi][[h4, p1, h2, p3]] + \[Chi][[h4, h3,  p1, h2, h1, p3]]} }
+ {-\[Chi]2[[h3, p1, h2, h1]], -KroneckerDelta[h2, h4] KroneckerDelta[p1, p3] \[Chi]1[[h3, h1]] + KroneckerDelta[h1, h4] KroneckerDelta[p1, p3] \[Chi]1[[h3, h2]] + KroneckerDelta[h2, h3] KroneckerDelta[p1, p3] \[Chi]2[[h4, h1]] - KroneckerDelta[h1, h3] KroneckerDelta[p1, p3] \[Chi]1[[h4, h2]] - KroneckerDelta[h1, h4] KroneckerDelta[h2, h3] \[Chi]1[[p1,  p3]] + KroneckerDelta[h1, h3] KroneckerDelta[h2, h4] \[Chi]1[[p1, p3]]
+    - KroneckerDelta[h2, h4] \[Chi]2[[h3, p1, h1, p3]] + KroneckerDelta[h1, h4] \[Chi]2[[h3, p1, h2, p3]] + KroneckerDelta[p1, p3] \[Chi]2[[h4, h3, h2, h1]] +  KroneckerDelta[h2, h3] \[Chi]2[[h4, p1, h1, p3]] - KroneckerDelta[h1, h3] \[Chi]2[[h4, p1, h2, p3]] + \[Chi]3[[h4, h3,  p1, h2, h1, p3]]} }
 ```
 
 
@@ -117,13 +117,13 @@ Output:
 
 'Many-body terms'
 
-\[Chi][[h5,p1,h2,h3]]==t1[[o1,p1]] ERI[[h5,o1,h2,h3]]-t1[[h3,v1]] t1[[o1,p1]] ERI[[h5,o1,v1,h2]]+t1[[h2,v1]] t1[[o1,p1]] ERI[[h5,o1,v1,h3]]+t1[[h2,v1]] t1[[h3,v2]] t1[[o1,p1]] ERI[[h5,o1,v1,v2]]-ERI[[h5,p1,h2,h3]]+t1[[h3,v1]] ERI[[h5,p1,v1,h2]]-t1[[h2,v1]] ERI[[h5,p1,v1,h3]]-t1[[h2,v1]] t1[[h3,v2]] ERI[[h5,p1,v1,v2]]-F[[h5,v1]] t2[[h2,h3,v1,p1]]+1/2 t1[[o1,p1]] ERI[[h5,o1,v1,v2]] t2[[h2,h3,v1,v2]]-1/2 ERI[[h5,p1,v1,v2]] t2[[h2,h3,v1,v2]]+t1[[o1,v1]] ERI[[h5,o1,v1,v2]] t2[[h2,h3,v2,p1]]-ERI[[h5,o1,v1,h3]] t2[[o1,h2,v1,p1]]+t1[[h3,v1]] ERI[[h5,o1,v1,v2]] t2[[o1,h2,v2,p1]]+ERI[[h5,o1,v1,h2]] t2[[o1,h3,v1,p1]]-t1[[h2,v1]] ERI[[h5,o1,v1,v2]] t2[[o1,h3,v2,p1]]
-\[Chi][[h5,h4,h3,p1,h1,h2]]==ERI[[h5,h4,v1,h3]] t2[[h1,h2,v1,p1]]-t1[[h3,v1]] ERI[[h5,h4,v1,v2]] t2[[h1,h2,v2,p1]]-ERI[[h5,h4,v1,h2]] t2[[h1,h3,v1,p1]]+t1[[h2,v1]] ERI[[h5,h4,v1,v2]] t2[[h1,h3,v2,p1]]+ERI[[h5,h4,v1,h1]] t2[[h2,h3,v1,p1]]-t1[[h1,v1]] ERI[[h5,h4,v1,v2]] t2[[h2,h3,v2,p1]]
+\[Chi]2[[h5,p1,h2,h3]]==t1[[o1,p1]] ERI[[h5,o1,h2,h3]]-t1[[h3,v1]] t1[[o1,p1]] ERI[[h5,o1,v1,h2]]+t1[[h2,v1]] t1[[o1,p1]] ERI[[h5,o1,v1,h3]]+t1[[h2,v1]] t1[[h3,v2]] t1[[o1,p1]] ERI[[h5,o1,v1,v2]]-ERI[[h5,p1,h2,h3]]+t1[[h3,v1]] ERI[[h5,p1,v1,h2]]-t1[[h2,v1]] ERI[[h5,p1,v1,h3]]-t1[[h2,v1]] t1[[h3,v2]] ERI[[h5,p1,v1,v2]]-F[[h5,v1]] t2[[h2,h3,v1,p1]]+1/2 t1[[o1,p1]] ERI[[h5,o1,v1,v2]] t2[[h2,h3,v1,v2]]-1/2 ERI[[h5,p1,v1,v2]] t2[[h2,h3,v1,v2]]+t1[[o1,v1]] ERI[[h5,o1,v1,v2]] t2[[h2,h3,v2,p1]]-ERI[[h5,o1,v1,h3]] t2[[o1,h2,v1,p1]]+t1[[h3,v1]] ERI[[h5,o1,v1,v2]] t2[[o1,h2,v2,p1]]+ERI[[h5,o1,v1,h2]] t2[[o1,h3,v1,p1]]-t1[[h2,v1]] ERI[[h5,o1,v1,v2]] t2[[o1,h3,v2,p1]]
+\[Chi]3[[h5,h4,h3,p1,h1,h2]]==ERI[[h5,h4,v1,h3]] t2[[h1,h2,v1,p1]]-t1[[h3,v1]] ERI[[h5,h4,v1,v2]] t2[[h1,h2,v2,p1]]-ERI[[h5,h4,v1,h2]] t2[[h1,h3,v1,p1]]+t1[[h2,v1]] ERI[[h5,h4,v1,v2]] t2[[h1,h3,v2,p1]]+ERI[[h5,h4,v1,h1]] t2[[h2,h3,v1,p1]]-t1[[h1,v1]] ERI[[h5,h4,v1,v2]] t2[[h2,h3,v2,p1]]
 
 'Block (2,1)'
 
-KroneckerDelta[h3,h5]\[Chi][[h4,p1,h2,h1]]+KroneckerDelta[h2,h5]\[Chi][[h4,p1,h3,h1]]+KroneckerDelta[h1,h5]\[Chi][[h4,p1,h3,h2]]-KroneckerDelta[h3,h4]\[Chi][[h5,p1,h2,h1]]-
-KroneckerDelta[h2,h4]\[Chi][[h5,p1,h3,h1]]-KroneckerDelta[h1,h4]\[Chi][[h5,p1,h3,h2]]-\[Chi][[h5,h4,p1,h3,h2,h1]]
+KroneckerDelta[h3,h5]\[Chi]2[[h4,p1,h2,h1]]+KroneckerDelta[h2,h5]\[Chi]2[[h4,p1,h3,h1]]+KroneckerDelta[h1,h5]\[Chi]2[[h4,p1,h3,h2]]-KroneckerDelta[h3,h4]\[Chi]2[[h5,p1,h2,h1]]-
+KroneckerDelta[h2,h4]\[Chi]2[[h5,p1,h3,h1]]-KroneckerDelta[h1,h4]\[Chi]2[[h5,p1,h3,h2]]-\[Chi]3[[h5,h4,p1,h3,h2,h1]]
 
 ```
 
@@ -144,8 +144,8 @@ Output:
 ```Mathematica
 
 'Many Body Terms'
-\[Chi][[h3,p1,p4,p3]]==-t1[[o1,p1]] ERI[[h3,o1,p4,p3]]+ERI[[h3,p1,p4,p3]]
-\[Chi][[p2,p1,h1,p3]]==t1[[o1,p2]] t1[[o2,p1]] ERI[[o1,o2,h1,p3]]+t1[[h1,v1]] t1[[o1,p2]] t1[[o2,p1]] ERI[[o1,o2,v1,p3]]-t1[[o1,p2]] ERI[[o1,p1,h1,p3]]-t1[[h1,v1]] t1[[o1,p2]] ERI[[o1,p1,v1,p3]]+t1[[o1,p1]] ERI[[o1,p2,h1,p3]]+t1[[h1,v1]] t1[[o1,p1]] ERI[[o1,p2,v1,p3]]+ERI[[p2,p1,h1,p3]]+t1[[h1,v1]] ERI[[p2,p1,v1,p3]]+F[[o1,p3]] t2[[o1,h1,p2,p1]]-ERI[[o1,p2,v1,p3]] t2[[o1,h1,v1,p1]]+ERI[[o1,p1,v1,p3]] t2[[o1,h1,v1,p2]]+1/2 ERI[[o1,o2,h1,p3]] t2[[o1,o2,p2,p1]]+1/2 t1[[h1,v1]] ERI[[o1,o2,v1,p3]] t2[[o1,o2,p2,p1]]+t1[[o1,v1]] ERI[[o1,o2,v1,p3]] t2[[o2,h1,p2,p1]]-t1[[o1,p2]] ERI[[o1,o2,v1,p3]] t2[[o2,h1,v1,p1]]+t1[[o1,p1]] ERI[[o1,o2,v1,p3]] t2[[o2,h1,v1,p2]]
+\[Chi]2[[h3,p1,p4,p3]]==-t1[[o1,p1]] ERI[[h3,o1,p4,p3]]+ERI[[h3,p1,p4,p3]]
+\[Chi]2[[p2,p1,h1,p3]]==t1[[o1,p2]] t1[[o2,p1]] ERI[[o1,o2,h1,p3]]+t1[[h1,v1]] t1[[o1,p2]] t1[[o2,p1]] ERI[[o1,o2,v1,p3]]-t1[[o1,p2]] ERI[[o1,p1,h1,p3]]-t1[[h1,v1]] t1[[o1,p2]] ERI[[o1,p1,v1,p3]]+t1[[o1,p1]] ERI[[o1,p2,h1,p3]]+t1[[h1,v1]] t1[[o1,p1]] ERI[[o1,p2,v1,p3]]+ERI[[p2,p1,h1,p3]]+t1[[h1,v1]] ERI[[p2,p1,v1,p3]]+F[[o1,p3]] t2[[o1,h1,p2,p1]]-ERI[[o1,p2,v1,p3]] t2[[o1,h1,v1,p1]]+ERI[[o1,p1,v1,p3]] t2[[o1,h1,v1,p2]]+1/2 ERI[[o1,o2,h1,p3]] t2[[o1,o2,p2,p1]]+1/2 t1[[h1,v1]] ERI[[o1,o2,v1,p3]] t2[[o1,o2,p2,p1]]+t1[[o1,v1]] ERI[[o1,o2,v1,p3]] t2[[o2,h1,p2,p1]]-t1[[o1,p2]] ERI[[o1,o2,v1,p3]] t2[[o2,h1,v1,p1]]+t1[[o1,p1]] ERI[[o1,o2,v1,p3]] t2[[o2,h1,v1,p2]]
 ```
 
 ## Conventions
