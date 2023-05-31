@@ -187,7 +187,7 @@ List of variables using in eomccgen
   url={https://github.com/rquintero-88/eomccgen.git}
   }
 ```
-# eomccnum User Manual
+# eomccnum 
 
 ## Overview
 **eomccnum** is a notebook designed to perform Coupled Cluster calculations for both ground state (CCS, CCD, CCSD, etc.) and excited states (EOM-CC) using [Wolfram Mathematica version 12.3](https://writings.stephenwolfram.com/2021/05/launching-version-12-3-of-wolfram-language-mathematica/). It is intended to be used alongside **eomccgen**, where you generate equations in **eomccgen** and then implement them in **eomccnum**.
