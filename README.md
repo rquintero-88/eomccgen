@@ -189,7 +189,6 @@ List of variables using in eomccgen
 ```
 # eomccnum 
 
-## Overview
 **eomccnum** is a notebook designed to perform Coupled Cluster calculations for both ground state (CCS, CCD, CCSD, etc.) and excited states (EOM-CC) using [Wolfram Mathematica version 12.3](https://writings.stephenwolfram.com/2021/05/launching-version-12-3-of-wolfram-language-mathematica/). It is intended to be used alongside **eomccgen**, where you generate equations in **eomccgen** and then implement them in **eomccnum**.
 
 ## Features
@@ -197,18 +196,12 @@ List of variables using in eomccgen
 - Provides three implemented examples: EE-EOM-CCSD, IP-EOM-CCSD, and DEA-EOM-CCSD.
 - Requires electronic integrals to be included in the **int** file. Default integrals for H2O, Be, He, and Ne are provided.
 
-## Getting Started
-1. Make sure you have [Wolfram Mathematica version 12.3](https://writings.stephenwolfram.com/2021/05/launching-version-12-3-of-wolfram-language-mathematica/) installed.
-2. Download the **eomccnum** notebook.
-3. Prepare the electronic integrals and include them in the **int** file.
-4. Open the **eomccnum** notebook in Mathematica.
-5. Select the desired example (EE-EOM-CCSD, IP-EOM-CCSD, or DEA-EOM-CCSD) or customize your own input.
-6. Run the calculations by executing the code.
+
 
 ## Example: EE-EOM-CCSD H2O in the Basis STO-3G
 To calculate the excitation energies of water using the EE-EOM-CCSD method with the basis STO-3G, use the following input:
 
-```
+```Mathematica
 eomccnum[10, 7, {{0., 0., -0.06990256}, {0., 0.75753241, 0.51843495}, {0., -0.75753241, 0.51843495}}, {8., 1., 1.}, "h2o.sto-3g", 1, 1.]
 ```
 
