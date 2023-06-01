@@ -189,12 +189,12 @@ List of variables using in eomccgen
 ```
 # eomccnum 
 
-**eomccnum** is a notebook designed to perform Coupled Cluster calculations for both ground state (CCS, CCD, CCSD, etc.) and excited states (EOM-CC) using [Wolfram Mathematica version 12.3](https://writings.stephenwolfram.com/2021/05/launching-version-12-3-of-wolfram-language-mathematica/). It is intended to be used alongside **eomccgen**, where you generate equations in **eomccgen** and then implement them in **eomccnum**. The features of this notebook are the following:
+**eomccnum** is a notebook designed to perform quantum chemistry calculations for both ground state using CC methods and charge and neutral excited states using EOM-CC methods. The notebook is written in [Wolfram Mathematica version 12.3](https://writings.stephenwolfram.com/2021/05/launching-version-12-3-of-wolfram-language-mathematica/). It is intended to be used alongside **eomccgen**, where you generate equations in **eomccgen** and then implement them in **eomccnum**. The features of this notebook are the following:
 
 
 - Implements Coupled Cluster calculations for ground state and excited states.
 - Provides three implemented examples: EE-EOM-CCSD, IP-EOM-CCSD, and DEA-EOM-CCSD.
-- Requires electronic integrals to be included in the **int** file.  Integrals for H2O, Be, He, and Ne are provided.
+- Requires electronic integrals to be included in the **int** file.  Integrals for small atoms and molecules are provided.
 
 
 
