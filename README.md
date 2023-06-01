@@ -202,7 +202,7 @@ List of variables using in eomccgen
 To calculate the excitation energies of water using the EE-EOM-CCSD method with the basis STO-3G, use the following input:
 
 ```Mathematica
-eomccnum[10, 7, {{0., 0., -0.06990256}, {0., 0.75753241, 0.51843495}, {0., -0.75753241, 0.51843495}}, {8., 1., 1.}, "h2o.sto-3g", 1, 1.]
+eomccnum[10, 7, {{0., 0., -0.06990256}, {0., 0.75753241, 0.51843495}, {0., -0.75753241, 0.51843495}}, {8., 1., 1.}, "h2o.sto-3g",  "EE"]
 ```
 
 
@@ -212,7 +212,7 @@ This input specifies:
 - Molecular coordinates: {{0., 0., -0.06990256}, {0., 0.75753241, 0.51843495}, {0., -0.75753241, 0.51843495}}
 - Nuclear charges: {8., 1., 1.}
 - File name: "h2o.sto-3g"
-- Additional parameters: 1, 1
+- EOM-CC method: "EE"
 
 Ensure that you provide the correct values for each parameter.
 
