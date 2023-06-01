@@ -64,7 +64,6 @@ t2[[o2,h1,v2,p1]]+1/2 ERI[[o1,o2,v1,v2]] t2[[o1,h1,v1,v2]] t2[[o2,h2,p2,p1]]-ERI
 
 ### IP-EOM-CC with singles and doubles (IP-EOM-CCSD)
 
-
 In this example, the IP-EOM-CCSD equations are generated thanks to the following input
 
 Input:
@@ -96,7 +95,6 @@ Output:
  {-\[Chi]2[[h3, p1, h2, h1]], -KroneckerDelta[h2, h4] KroneckerDelta[p1, p3] \[Chi]1[[h3, h1]] + KroneckerDelta[h1, h4] KroneckerDelta[p1, p3] \[Chi]1[[h3, h2]] + KroneckerDelta[h2, h3] KroneckerDelta[p1, p3] \[Chi]2[[h4, h1]] - KroneckerDelta[h1, h3] KroneckerDelta[p1, p3] \[Chi]1[[h4, h2]] - KroneckerDelta[h1, h4] KroneckerDelta[h2, h3] \[Chi]1[[p1,  p3]] + KroneckerDelta[h1, h3] KroneckerDelta[h2, h4] \[Chi]1[[p1, p3]]
     - KroneckerDelta[h2, h4] \[Chi]2[[h3, p1, h1, p3]] + KroneckerDelta[h1, h4] \[Chi]2[[h3, p1, h2, p3]] + KroneckerDelta[p1, p3] \[Chi]2[[h4, h3, h2, h1]] +  KroneckerDelta[h2, h3] \[Chi]2[[h4, p1, h1, p3]] - KroneckerDelta[h1, h3] \[Chi]2[[h4, p1, h2, p3]] + \[Chi]3[[h4, h3,  p1, h2, h1, p3]]} }
 ```
-
 
 ### Single block of DEA-EOM-CCSD in terms of many-body terms.
 
@@ -150,17 +148,13 @@ Output:
 
 ## Conventions
 
-
 ### Index Convention
 
 For the operators belonging to the bra and the ket, we use p1, p2, $\cdots$, h1, h2, $\cdots$. 
 For the particles/holes that play the role of dummy indices in the cluster operator $\hat{T}$ we use o1, o2, $\cdots$, v1, v2, $\cdots$, where the notations o and v refer to occupied and virtual, respectively.
 Finally, for the arbitrary indexes that can be either particle or hole, we use q1, q2, q3, $\cdots$.
 
-
-
 List of variables using in eomccgen
-
 
 | Description            | Mathematical symbol | Mathematica notation       |
 |------------------------|---------------------|----------------------------|
@@ -175,7 +169,6 @@ List of variables using in eomccgen
 | Three-body terms       | $\chi_{stu}^{pqr}$  | $\chi$2[[p,q,r,s,t,u]]     |
 | Four-body terms        | $\chi_{tuvw}^{pqrs}$| $\chi$3[[p,q,r,s,t,u,v,w]] |
 
-
 ## Citation
 
 ```
@@ -187,34 +180,31 @@ List of variables using in eomccgen
   url={https://github.com/rquintero-88/eomccgen.git}
   }
 ```
+
 # eomccnum 
 
-**eomccnum** is a notebook designed to perform quantum chemistry calculations for both ground state using CC methods and charge and neutral excited states using EOM-CC methods. The notebook is written in [Wolfram Mathematica version 12.3](https://writings.stephenwolfram.com/2021/05/launching-version-12-3-of-wolfram-language-mathematica/). It is intended to be used alongside **eomccgen**, where you generate equations in **eomccgen** and then implement them in **eomccnum**. The features of this notebook are the following:
-
+**eomccnum** is a notebook designed to perform quantum chemistry calculations for both ground state using CC methods and charge and neutral excited states using EOM-CC methods. The notebook is written in [Wolfram Mathematica version 12.3](https://writings.stephenwolfram.com/2021/05/launching-version-12-3-of-wolfram-language-mathematica/). It is intended to be used alongside **eomccgen**, where you can generate equations with **eomccgen** and then implement them in **eomccnum**. The features of this notebook are the following:
 
 - Implements Coupled Cluster calculations for ground state and excited states.
 - Provides three implemented examples: EE-EOM-CCSD, IP-EOM-CCSD, and DEA-EOM-CCSD.
-- Requires electronic integrals to be included in the **int** file.  Integrals for small atoms and molecules are provided.
+- Requires electronic integrals to be included in the **int** directory. Some integral files for small atoms and molecules are provided.
 
-
-
-## Example: EE-EOM-CCSD H2O in the Basis STO-3G
+## Example: EE-EOM-CCSD for H2O in the STO-3G basis
 To calculate the excitation energies of water using the EE-EOM-CCSD method with the basis STO-3G, use the following input:
 
 ```Mathematica
-eomccnum[10, 7, {{0., 0., -0.06990256}, {0., 0.75753241, 0.51843495}, {0., -0.75753241, 0.51843495}}, {8., 1., 1.}, "h2o.sto-3g",  "EE"]
+eomccnum[10,7,{{0.,0.,-0.06990256},{0.,0.75753241,0.51843495},{0.,-0.75753241,0.51843495}},{8.,1.,1.}, "h2o.sto-3g","EE"]
 ```
-
 
 This input specifies:
 - Number of electrons: 10
-- Contracted Gaussian: 7
+- Number of basis functions: 7
 - Molecular coordinates: {{0., 0., -0.06990256}, {0., 0.75753241, 0.51843495}, {0., -0.75753241, 0.51843495}}
 - Nuclear charges: {8., 1., 1.}
 - File name: "h2o.sto-3g"
 - EOM-CC method: "EE"
 
-Ensure that you provide the correct values for each parameter.
+Please, ensure that you provide the correct values for each parameter.
 
 For more information and additional examples, refer to the **eomccnum** user manual.
 
