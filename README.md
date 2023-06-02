@@ -172,7 +172,7 @@ List of variables using in eomccgen
 ## Citation
 
 ```
-@misc{rauleomccgen2023,
+@software{rauleomccgen2023,
   title = {eomccgen},
   author = {Quintero-Monsebaiz,Raul  and Loos,Pierre-François},
   year = {2023},
