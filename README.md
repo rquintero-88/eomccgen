@@ -201,6 +201,13 @@ List of variables using in eomccgen
 | Two-body terms         | $\chi_{qs}^{pq}$    | $\chi$2[[p,q,r,s]]         |
 | Three-body terms       | $\chi_{stu}^{pqr}$  | $\chi$2[[p,q,r,s,t,u]]     |
 | Four-body terms        | $\chi_{tuvw}^{pqrs}$| $\chi$3[[p,q,r,s,t,u,v,w]] |
+|EOMCC right-hand single-excitation| $r_{i}^{a}$         | r[[i,a]]                   |
+|EOMCC right-hand double-excitation| $r_{ij}^{ab}$       | r[[i,j,a,b]]               |
+|EOMCC right-hand triple-excitation| $r_{ijk}^{abc}$     | r[[i,j,k,a,b,c]]           |
+|EOMCC left-hand single-excitation| $l_{i}^{a}$         | l[[i,a]]                   |
+|EOMCC left-hand double-excitation| $l_{ij}^{ab}$       | l[[i,j,a,b]]               |
+|EOMCC left-hand triple-excitation| $l_{ijk}^{abc}$     | l[[i,j,k,a,b,c]]           |
+
 
 ## Citation
 
