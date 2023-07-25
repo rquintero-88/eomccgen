@@ -146,6 +146,39 @@ Output:
 \[Chi]2[[p2,p1,h1,p3]]==t1[[o1,p2]] t1[[o2,p1]] ERI[[o1,o2,h1,p3]]+t1[[h1,v1]] t1[[o1,p2]] t1[[o2,p1]] ERI[[o1,o2,v1,p3]]-t1[[o1,p2]] ERI[[o1,p1,h1,p3]]-t1[[h1,v1]] t1[[o1,p2]] ERI[[o1,p1,v1,p3]]+t1[[o1,p1]] ERI[[o1,p2,h1,p3]]+t1[[h1,v1]] t1[[o1,p1]] ERI[[o1,p2,v1,p3]]+ERI[[p2,p1,h1,p3]]+t1[[h1,v1]] ERI[[p2,p1,v1,p3]]+F[[o1,p3]] t2[[o1,h1,p2,p1]]-ERI[[o1,p2,v1,p3]] t2[[o1,h1,v1,p1]]+ERI[[o1,p1,v1,p3]] t2[[o1,h1,v1,p2]]+1/2 ERI[[o1,o2,h1,p3]] t2[[o1,o2,p2,p1]]+1/2 t1[[h1,v1]] ERI[[o1,o2,v1,p3]] t2[[o1,o2,p2,p1]]+t1[[o1,v1]] ERI[[o1,o2,v1,p3]] t2[[o2,h1,p2,p1]]-t1[[o1,p2]] ERI[[o1,o2,v1,p3]] t2[[o2,h1,v1,p1]]+t1[[o1,p1]] ERI[[o1,o2,v1,p3]] t2[[o2,h1,v1,p2]]
 ```
 
+### Left-hand side equations of EA-EOM-CC with singles and doubles (IP-EOM-CCSD) with the product l*Hbar
+
+In this example, the left-hand side IP-EOM-CCSD equations are generated including the product of l vectro with the EOMCC matrix. To achieve that the following inputs are needed
+Input:
+
+```mathematica
+ClusterOperator = {{"1h1p"}, {"2h2p"}};
+EOMOperator = {{"1h0p"}, {"2h1p"}};
+LeftRigthEOM = {"L"};
+EOMCCgen[ClusterOperator, EOMOperator]
+```
+Output:
+
+```mathematica
+
+'Many-body terms'
+
+\[Chi]1[[h1,h3]]==-F[[h1,h3]]-F[[h1,v1]] t1[[h3,v1]]+t1[[o1,v1]] ERI[[h1,o1,v1,h3]]+t1[[h3,v2]] t1[[o1,v1]] ERI[[h1,o1,v1,v2]]+1/2 ERI[[h1,o1,v1,v2]] t2[[o1,h3,v1,v2]]
+\[Chi]1[[h2,p1]]==F[[h2,p1]]-t1[[o1,v1]] ERI[[h2,o1,v1,p1]]
+\[Chi]2[[h2,h1,h3,p1]]==ERI[[h2,h1,h3,p1]]+t1[[h3,v1]] ERI[[h2,h1,v1,p1]]
+\[Chi]2[[h1,p3,h4,h3]]==t1[[o1,p3]] ERI[[h1,o1,h3,h4]]-t1[[h4,v1]] t1[[o1,p3]] ERI[[h1,o1,v1,h3]]+t1[[h3,v1]] t1[[o1,p3]] ERI[[h1,o1,v1,h4]]+t1[[h3,v1]] t1[[h4,v2]] t1[[o1,p3]] ERI[[h1,o1,v1,v2]]-ERI[[h1,p3,h3,h4]]+t1[[h4,v1]] ERI[[h1,p3,v1,h3]]-t1[[h3,v1]] ERI[[h1,p3,v1,h4]]-t1[[h3,v1]] t1[[h4,v2]] ERI[[h1,p3,v1,v2]]-F[[h1,v1]] t2[[h3,h4,v1,p3]]+1/2 t1[[o1,p3]] ERI[[h1,o1,v1,v2]] t2[[h3,h4,v1,v2]]-1/2 ERI[[h1,p3,v1,v2]] t2[[h3,h4,v1,v2]]+t1[[o1,v1]] ERI[[h1,o1,v1,v2]] t2[[h3,h4,v2,p3]]-ERI[[h1,o1,v1,h4]] t2[[o1,h3,v1,p3]]+t1[[h4,v1]] ERI[[h1,o1,v1,v2]] t2[[o1,h3,v2,p3]]+ERI[[h1,o1,v1,h3]] t2[[o1,h4,v1,p3]]-t1[[h3,v1]] ERI[[h1,o1,v1,v2]] t2[[o1,h4,v2,p3]]
+\[Chi]1[[p3,p1]]==F[[p3,p1]]-F[[o1,p1]] t1[[o1,p3]]-t1[[o1,v1]] t1[[o2,p3]] ERI[[o1,o2,v1,p1]]+t1[[o1,v1]] ERI[[o1,p3,v1,p1]]-1/2 ERI[[o1,o2,v1,p1]] t2[[o1,o2,v1,p3]]
+\[Chi]2[[h2,h1,h4,h3]]==-ERI[[h2,h1,h3,h4]]+t1[[h4,v1]] ERI[[h2,h1,v1,h3]]-t1[[h3,v1]] ERI[[h2,h1,v1,h4]]-t1[[h3,v1]] t1[[h4,v2]] ERI[[h2,h1,v1,v2]]-1/2 ERI[[h2,h1,v1,v2]] t2[[h3,h4,v1,v2]]
+\[Chi]2[[h2,p3,h4,p1]]==t1[[o1,p3]] ERI[[h2,o1,h4,p1]]+t1[[h4,v1]] t1[[o1,p3]] ERI[[h2,o1,v1,p1]]-ERI[[h2,p3,h4,p1]]-t1[[h4,v1]] ERI[[h2,p3,v1,p1]]-ERI[[h2,o1,v1,p1]] t2[[o1,h4,v1,p3]]
+\[Chi]3[[h2,h1,p3,h4,h3,p1]]==ERI[[h2,h1,v1,p1]] t2[[h3,h4,v1,p3]]
+
+
+
+'EOM-CC matrix in terms of many-body terms'
+
+{{l[[h3]] \[Chi]1[[h1,h3]],-l[[h2]] \[Chi]1[[h1,p1]]+l[[h1]] \[Chi]1[[h2,p1]]+l[[h3]] \[Chi]2[[h2,h1,h3,p1]]},{l[[h3,h4,p3]] \[Chi]2[[h1,p3,h4,h3]],\[Chi]1[[p3,p1]] l[[h1,h2,p3]]+\[Chi]1[[h2,h4]] l[[h1,h4,p1]]-\[Chi]1[[p3,p1]] l[[h2,h1,p3]]-\[Chi]1[[h1,h4]] l[[h2,h4,p1]]-\[Chi]1[[h2,h3]] l[[h3,h1,p1]]+\[Chi]1[[h1,h3]] l[[h3,h2,p1]]+l[[h3,h2,p3]] \[Chi]2[[h1,p3,h3,p1]]-l[[h2,h4,p3]] \[Chi]2[[h1,p3,h4,p1]]+l[[h3,h4,p1]] \[Chi]2[[h2,h1,h4,h3]]-l[[h3,h1,p3]] \[Chi]2[[h2,p3,h3,p1]]+l[[h1,h4,p3]] \[Chi]2[[h2,p3,h4,p1]]+l[[h3,h4,p3]] \[Chi]3[[h2,h1,p3,h4,h3,p1]]}}
+```
+
 ## Conventions
 
 ### Index Convention
